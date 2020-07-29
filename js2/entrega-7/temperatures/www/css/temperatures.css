@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+section.temp {
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+}
+
+.temp table caption {
+  font-size: 2.5rem;
+  text-decoration: underline;
+  padding: 1rem;
+  font-weight: bold;
+  background-image: url("/img/Fondo_caption.png");
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+table {
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+th {
+  background-color: lightsalmon;
+  border: 1px solid black;
+}
+
+th:first-child {
+  min-width: 200px;
+}
+
+td:first-child {
+  background-color: lightgray;
+  border: 1px solid black;
+}
+
+td:not(:first-child) {
+  border: 1px solid black;
+  min-width: 75px;
+}
+
+.lower {
+  background-color: aqua;
+}
+
+.low {
+  background-color: green;
+}
+
+.medium {
+  background-color: yellow;
+}
+
+.high {
+  background-color: orange;
+}
+
+.higher {
+  background-color: red;
+}

@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@300;600;900&display=swap");
+
+html {
+  --font: Overpass, sans-serif;
+  --blue: rgb(5, 166, 187);
+  --bright: white;
+  --dark: black;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  font-family: var(--font);
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  margin: 1rem;
+  text-align: center;
+}
+
+/* HEADER */
+
+header img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 10px solid var(--dark);
+}
+
+header h1 {
+  margin-top: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+header a {
+  text-decoration: none;
+  color: var(--dark);
+  font-weight: 600;
+}
+
+/* SECTION */
+
+section {
+  margin: 1rem;
+}
+
+section p,
+section figure {
+  margin-bottom: 1rem;
+}
+
+section figure img {
+  width: 100%;
+}
+
+.experience h2 {
+  margin-bottom: 1rem;
+}
+
+.experience ul {
+  margin-left: 3rem;
+}
+
+/* BOTÓN DE MÁS INFO Y VOLVER DE ABOUT */
+a.action {
+  background-color: var(--blue);
+  color: var(--bright);
+  text-decoration: none;
+  padding: 0.5rem 1.5rem;
+  font-weight: 600;
+}
+
+/* FOOTER */
+
+footer {
+  background-color: var(--dark);
+  order: -1;
+}
+
+footer nav {
+  display: flex;
+  justify-content: flex-end;
+}
+
+footer nav a {
+  text-decoration: none;
+  color: var(--bright);
+  font-weight: 600;
+  padding: 0.5rem;
+}
+
+/* MEDIA */
+
+@media (min-width: 700px) {
+  body {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  header h1 {
+    font-size: 4rem;
+  }
+
+  section {
+    width: calc(50% - 2rem);
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  .about header {
+    width: 25%;
+    line-height: 4rem;
+  }
+
+  .about section {
+    width: calc(75% - 5rem);
+  }
+
+  footer {
+    width: 100%;
+  }
+}
+
+@media (min-width: 1000px) {
+  body {
+    font-size: 1.5rem;
+  }
+
+  header {
+    text-align: right;
+  }
+
+  header h1 {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  header a {
+    font-size: 1.25rem;
+  }
+  header,
+  section {
+    width: calc(33.33% - 2rem);
+    padding-top: 1rem;
+  }
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="desciption" content="Página de aventura" />
+    <meta name="copyright" content="Iñaki" />
+    <title>Contacto</title>
+    <!--ESTILOS-->
+    <style>
+      * {
+        text-align: center;
+      }
+      html {
+        background: lavender;
+        font-size: 25px;
+      }
+      a {
+        color: blue;
+      }
+    </style>
+    <!--/ESTILOS-->
+  </head>
+
+  <body>
+    <!--MENU-->
+    <nav>
+      <a href="../index.html">
+        INICIO |
+      </a>
+      <a href="#">
+        CONTACTO (Estás aquí)
+      </a>
+    </nav>
+    <!--/MENU-->
+    <main>
+      <!--TITULAR-->
+      <h1>
+        ¿Tienes alguna sugerencia o duda?
+      </h1>
+      <!--/TITULAR-->
+      <!--LINKS DE CONTACTO-->
+      <p>
+        Contáctanos en
+        <a href="https://twitter.com" target="_blank">Twitter</a>, en
+        <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>,
+        envíanos un correo a través de este
+        <a
+          href="mailto:sony1.3@hotmail.es?Subject=Sugerencia%20o%20duda"
+          target="_blank"
+          >link</a
+        >
+        o rellena el siguiente formulario 👇
+      </p>
+      <!--/LINKS DE CONTACTO-->
+      <!--FORMULARIO DE CONTACTO-->
+      <form>
+        <!--DATOS PERSONALES-->
+        <fieldset>
+          <legend>Datos personales</legend>
+          <label for="name">Nombre</label>
+          <input type="text" name="name" placeholder="Nombre" required />
+          <br />
+          <label for="surname">Apellidos</label>
+          <input type="text" name="surname" placeholder="Apellidos" />
+          <br />
+          <label for="email">Email</label>
+          <input type="email" name="email" placeholder="Tu email" required />
+        </fieldset>
+        <!--/DATOS PERSONALES-->
+        <br />
+        <!--MENSAJE-->
+        <fieldset>
+          <legend>¿Qué nos propones o qué dudas tienes?</legend>
+          <label for="subject">Asunto</label>
+          <input
+            type="text"
+            name="subject"
+            placeholder="Escribe aquí el asunto del mensaje"
+            size="30"
+            width="100"
+          />
+          <br /><br />
+          <label for="message">Escribe aquí</label>
+          <textarea id="message" rows="15" cols="75"></textarea>
+        </fieldset>
+        <!--/MENSAJE-->
+        <br />
+        <!--BOTÓN ENVIAR FORMULARIO-->
+        <input type="button" value="Enviar formulario" />
+        <br />
+      </form>
+      <!--/BOTÓN ENVIAR FORMULARIO-->
+      <!--/>FORMULARIO DE CONTACTO-->
+    </main>
+    <hr />
+    <!--COPYRIGHT-->
+    <footer>
+      Iñaki GV, 2020-2021
+    </footer>
+    <!--/COPYRIGHT-->
+  </body>
+</html>

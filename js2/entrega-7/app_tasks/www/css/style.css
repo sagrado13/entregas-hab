@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500;700;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  --font: Roboto, sans-serif;
+  --dark: black;
+  --bright: white;
+  --medium: gray;
+  --add: green;
+  --delete: red;
+  --clean: blue;
+  --yellow: rgb(245, 245, 220);
+}
+
+body {
+  font-family: var(--font);
+  background-color: var(--yellow);
+  padding: 0 2rem;
+  max-width: 800px;
+  margin: auto;
+}
+
+header {
+  text-align: center;
+  padding: 1rem;
+  font-weight: 900;
+  text-decoration: underline;
+  font-size: 1.25rem;
+}
+
+form#new-task {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto auto;
+  gap: 0.5rem;
+  grid-template-areas:
+    "input input input add"
+    "clean clean delete delete";
+  margin-bottom: 1rem;
+}
+
+form#new-task fieldset {
+  border: 0;
+  grid-area: input;
+}
+
+form#new-task fieldset input {
+  background-color: var(--yellow);
+  width: 100%;
+  padding: 0.25rem;
+  font-family: var(--font);
+  border: 1px solid var(--medium);
+}
+
+form#new-task label {
+  display: block;
+  font-weight: 700;
+  font-size: 0.8rem;
+}
+
+form#new-task button {
+  border: 0;
+  padding: 0.3rem;
+  border-bottom-left-radius: 100px 100px;
+  border-top-left-radius: 100px 100px;
+  border-bottom-right-radius: 100px 100px;
+  border-top-right-radius: 100px 100px;
+  font-weight: bold;
+  color: var(--bright);
+}
+
+.add {
+  grid-area: add;
+  align-self: end;
+  background-color: var(--add);
+  font-size: 1.5rem;
+}
+
+.clean {
+  grid-area: clean;
+  background-color: var(--clean);
+}
+
+.delete {
+  grid-area: delete;
+  background-color: var(--delete);
+}
+
+/* Lista */
+
+ul#tasks {
+  list-style: none;
+  padding-top: 1rem;
+  border-top: 2px dotted var(--medium);
+}
+
+ul#tasks li {
+  display: flex;
+  align-items: center;
+  word-wrap: break-word;
+  margin-bottom: 0.7rem;
+  margin-right: 1rem;
+}
+
+ul#tasks li input {
+  margin-right: 0.7rem;
+}
+
+.done {
+  text-decoration: line-through;
+  color: var(--medium);
+}
+
+@media (min-width: 700px) {
+  form#new-task {
+    grid-template-areas:
+      "input input input add"
+      "clean . delete .";
+  }
+}

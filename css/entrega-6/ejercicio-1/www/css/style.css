@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Pragati+Narrow:wght@700&family=Roboto:wght@300;700&display=swap");
+
+html {
+  --dark: rgb(20, 20, 20);
+  --gray: rgb(180, 180, 180);
+  --white: rgb(255, 255, 255);
+  --title-font: Pragati Narrow, sans-serif;
+  --body-font: Roboto, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  background-image: url("/img/fondo.jpg");
+  background-size: cover;
+  min-height: 100vh;
+  font-family: var(--body-font);
+  font-weight: 300;
+}
+
+main {
+  background-color: var(--white);
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* HEADER */
+
+header {
+  color: var(--white);
+  background-color: var(--dark);
+  text-align: center;
+  padding: 3rem 0;
+}
+
+header h1 {
+  font-family: var(--title-font);
+  text-decoration: underline;
+  font-size: 2.5rem;
+}
+
+header p {
+  margin-bottom: 0.75rem;
+}
+
+header nav a {
+  color: var(--dark);
+  background-color: var(--white);
+  text-decoration: none;
+  padding: 0.3rem 2rem;
+  display: inline-block;
+  font-size: 0.75rem;
+}
+
+header nav a strong {
+  display: block;
+  font-size: 1.2rem;
+}
+
+/* SECTION */
+
+section {
+  padding: 1rem;
+}
+
+section#content aside {
+  background-color: var(--gray);
+  text-decoration: underline;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+section#content aside h2 {
+  margin-bottom: 0.75rem;
+}
+
+section#content p.highlight {
+  color: var(--gray);
+  font-size: 1.25rem;
+  text-align: center;
+  font-weight: 700;
+  margin: 1.5rem 0;
+}
+
+section#content p img {
+  margin-bottom: 1rem;
+}
+
+/* FOOTER */
+
+footer {
+  background-color: var(--gray);
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+  text-align: center;
+  text-decoration: underline;
+}
+
+@media (min-width: 500px) {
+  section#content p:nth-child(3) {
+    columns: 2;
+  }
+}
+
+@media (min-width: 700px) {
+  html {
+    font-size: 1.2rem;
+  }
+
+  section#content aside {
+    position: absolute;
+    top: 5rem;
+    width: 5rem;
+    right: 0;
+    padding: 1rem;
+    font-size: 0.5rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  html {
+    font-size: 1.5rem;
+  }
+}

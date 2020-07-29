@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;900&display=swap");
+
+html {
+  --font: Roboto, sans-serif;
+  --dark: black;
+  --white: white;
+  --purple: rebeccapurple;
+  --orange: orange;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font);
+  background-color: var(--orange);
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header h1 {
+  text-align: center;
+  font-size: 2rem;
+  padding: 2rem;
+}
+
+/* LISTAS */
+
+ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+
+ul li {
+  max-width: 400px;
+}
+
+ul article {
+  background-color: var(--white);
+  margin: 1rem;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+}
+
+ul article header {
+  text-align: center;
+  padding: 0.5rem;
+}
+
+ul article header figure img {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 2px solid var(--orange);
+  border-radius: 50%;
+}
+ul article header h2 {
+  color: var(--dark);
+  padding-bottom: 1rem;
+}
+
+ul li article p {
+  background-color: var(--purple);
+  font-weight: 300;
+  line-height: 1.25rem;
+  padding: 1.25rem;
+}
+
+ul article header nav ul li a {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  margin: 0.75rem 0.75rem;
+  font-size: 0;
+  background-size: cover;
+}
+
+ul article header nav ul li a.facebook {
+  background-image: url("/img/facebook.svg");
+  border-radius: 25%;
+}
+
+ul article header nav ul li a.instagram {
+  background-image: url("/img/instagram.svg");
+}
+
+ul article header nav ul li a.twitter {
+  background-image: url("/img/twitter.svg");
+}
+
+ul article header nav ul li a.linkedin {
+  background-image: url("/img/linkedin.svg");
+}
+
+@media (min-width: 700px) {
+  header h1 {
+    font-size: 5rem;
+    text-decoration: underline;
+  }
+}
+
+@media (min-width: 1000px) {
+  header h1 {
+    text-transform: uppercase;
+  }
+}
